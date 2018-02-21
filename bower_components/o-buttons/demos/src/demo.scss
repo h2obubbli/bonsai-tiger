@@ -1,0 +1,113 @@
+$o-buttons-is-silent: false;
+
+@import "../../main";
+
+html {
+	@include oColorsFor(page);
+}
+
+body {
+	font-family: Metric, serif;
+	margin: 1em;
+}
+
+h2 {
+	font-weight: 400;
+}
+
+p {
+	max-width: 900px;
+	font-size: 18px;
+}
+
+.test-page {
+	@include oColorsFor(page);
+}
+
+.faux-inline-block {
+	display: inline-block;
+}
+
+.theme-box {
+	display: inline-block;
+	padding: 10px;
+	margin-left: -10px;
+	margin-right: 10px;
+
+}
+.inverse {
+	background-color: oColorsGetPaletteColor('slate');
+}
+
+.custom-button-theme-demo body {
+	margin: 0;
+}
+
+.demo__custom-theme {
+	padding: 1em;
+}
+
+.demo__custom-theme--teal {
+	background-color: oColorsGetPaletteColor(teal-60);
+	padding: 1em;
+}
+.demo__custom-theme--slate {
+	background-color: oColorsGetPaletteColor(slate);
+	padding: 1em;
+}
+.demo__custom-theme--lemon {
+	background-color: oColorsGetPaletteColor(slate);
+	padding: 1em;
+}
+
+.demo__custom-theme-button--teal-primary {
+	// Test the deprecated mixin pattern still works
+	@include oButtonsCustomTheme('teal-60', 'white', 'primary');
+}
+.demo__custom-theme-button--teal-secondary {
+	// You may just use the oButtonsTheme mixin too
+	@include oButtonsTheme($theme: (background: 'teal-60', accent: 'white', colorizer: 'secondary'));
+}
+
+.demo__custom-theme-button--slate-primary {
+	@include oButtonsCustomTheme($theme: (background: 'slate', accent: 'white', colorizer: 'primary'));
+}
+.demo__custom-theme-button--slate-secondary {
+	@include oButtonsCustomTheme($theme: (background: 'slate', accent: 'white', colorizer: 'secondary'));
+}
+.demo__custom-theme-button--lemon-primary {
+	@include oButtonsCustomTheme($theme: (background: 'slate', accent: 'lemon', colorizer: 'primary'));
+}
+.demo__custom-theme-button--lemon-secondary {
+	@include oButtonsCustomTheme($theme: (background: 'slate', accent: 'lemon', colorizer: 'secondary'));
+}
+
+.demo__custom-icon-button--book {
+	@include oButtons('big', 'secondary');
+	@include oButtonsIconButton('book', 'big', 'secondary');
+}
+
+.demo__custom-icon-button--book--primary {
+	@include oButtons('big', 'primary');
+	@include oButtonsIconButton('book', 'big', 'primary');
+}
+
+.demo__custom-icon-button--book--icon-only {
+	@include oButtons('big', 'primary');
+	@include oButtonsIconButton('book', 'big', 'primary', $is-icon-only: true);
+}
+
+.demo__custom-theme-primary-icon-button--book {
+	@include oButtons('big');
+	$custom-theme: (background: 'slate', accent: 'claret-100', colorizer: 'primary');
+	@include oButtonsCustomTheme($theme: $custom-theme);
+	@include oButtonsIconButton('book', 'big', $custom-theme);
+}
+
+.demo__custom-theme-secondary-icon-button--book {
+	@include oButtons(big);
+	$custom-theme: (background: 'slate', accent: 'claret-100', colorizer: 'secondary');
+
+	@include oButtonsCustomTheme($theme: $custom-theme);
+	@include oButtonsIconButton('book', 'big', $custom-theme);
+}

@@ -1,0 +1,26 @@
+{
+  "name": "o-tabs",
+  "main": [
+    "main.scss",
+    "main.js"
+  ],
+  "ignore": [
+    ".gitignore"
+  ],
+  "dependencies": {
+    "o-colors": "^4.0.2",
+    "o-buttons": "^5.0.0",
+    "o-dom": "^2.0.3"
+  },
+  "homepage": "https://github.com/Financial-Times/o-tabs",
+  "version": "4.0.4",
+  "_release": "4.0.4",
+  "_resolution": {
+    "type": "version",
+    "tag": "v4.0.4",
+    "commit": "018230e4d64e22cb6a471f306186ac8db96dd86d"
+  },
+  "_source": "https://github.com/Financial-Times/o-tabs.git",
+  "_target": "^4.0.4",
+  "_originalSource": "o-tabs"
+}

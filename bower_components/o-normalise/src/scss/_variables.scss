@@ -1,0 +1,16 @@
+/// Silent mode variable
+$o-normalise-is-silent: true !default;
+
+/// Grid Gutter sizes
+///
+/// @type Map
+$o-normalise-grid-gutters: (
+	default: 10px,
+	M:       20px,
+) !default;
+
+/// Standardised border radius
+$o-normalise-border-radius: 0;
+
+/// TODO: Update this to the o-colors value in the next major (it's teal-100)
+$o-normalise-focus-color: #1aecff;

@@ -1,0 +1,38 @@
+{
+	"icons": [
+		{
+			"name": "arrow-left",
+			"text": "Go back"
+		},
+		{
+			"name": "arrow-right",
+			"text": "Go forward"
+		},
+		{
+			"name": "upload",
+			"text": "Upload"
+		},
+		{
+			"name": "warning",
+			"text": "Danger"
+		},
+		{
+			"name": "arrow-down",
+			"text": "Show"
+		},
+		{
+			"name": "arrow-up",
+			"text": "Hide"
+		}
+	],
+	"themes": [
+			{"name": "primary"},
+			{"name": "secondary"},
+			{"name": "mono"},
+			{"name": "inverse"}
+		],
+	"sizes": [
+			{"name": "small"},
+			{"name": "big"}
+	]
+}

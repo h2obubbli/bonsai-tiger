@@ -1,0 +1,29 @@
+{
+  "name": "o-hierarchical-nav",
+  "main": [
+    "main.scss",
+    "main.js"
+  ],
+  "ignore": [],
+  "dependencies": {
+    "o-colors": "^4.0.1",
+    "o-hoverable": ">=0.1.1 <4",
+    "o-viewport": ">=1.0.0 <4",
+    "o-dom": ">=0.4.0 <3",
+    "ftdomdelegate": ">=1.0.0 <3",
+    "o-squishy-list": ">=1.0.0 <3",
+    "o-layers": ">=0.2.0 <3",
+    "o-icons": ">=4.4.2 <6"
+  },
+  "homepage": "https://github.com/Financial-Times/o-hierarchical-nav",
+  "version": "5.0.5",
+  "_release": "5.0.5",
+  "_resolution": {
+    "type": "version",
+    "tag": "v5.0.5",
+    "commit": "8cf303afc37c1013d0aff0ac6e6fe6dd9d22b0b9"
+  },
+  "_source": "https://github.com/Financial-Times/o-hierarchical-nav.git",
+  "_target": "^5.0.5",
+  "_originalSource": "o-hierarchical-nav"
+}

@@ -1,0 +1,19 @@
+{
+  "name": "o-viewport",
+  "description": "Utility for moderating listeners for browser events on window",
+  "main": "main.js",
+  "dependencies": {
+    "o-utils": "^1.0.0"
+  },
+  "homepage": "https://github.com/Financial-Times/o-viewport",
+  "version": "3.1.5",
+  "_release": "3.1.5",
+  "_resolution": {
+    "type": "version",
+    "tag": "v3.1.5",
+    "commit": "1463224e19fcb4b71f4441b126ef18e1e11c07c5"
+  },
+  "_source": "https://github.com/Financial-Times/o-viewport.git",
+  "_target": ">=1.0.0 <4",
+  "_originalSource": "o-viewport"
+}
