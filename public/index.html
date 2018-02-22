@@ -7,6 +7,7 @@
     <title>o-hierarchical-nav: responsive-nav demo</title>
     <meta name="viewport" content="initial-scale=1.0, width=device-width">
     <link rel="stylesheet" href="bundle.css">
+    <link rel="stylesheet" href="/client/main.scss">
 </head>
 
 <body>
@@ -14,7 +15,7 @@
     <!-- o-nav sample markup -->
     <nav class="o-hierarchical-nav" data-o-component="o-hierarchical-nav">
         <ul data-o-hierarchical-nav-level="1">
-            <li data-priority="2" aria-selected="true"><a>Item 1</a></li>
+            <li data-priority="2" aria-selected="true"><a>Itemsd 1</a></li>
             <li data-priority="3"><a>Item 2</a></li>
             <li data-priority="1" class="o-hierarchical-nav__parent"><a>Item 3 (parent) <i></i></a>
                 <ul data-o-hierarchical-nav-level="2">
@@ -67,6 +68,8 @@
     <!-- Polyfill script -->
     <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=classlist,createevent,~html5-elements,datauri,cssgradients,mediaqueries,csstransitions,default"></script>
     <script src="bundle.js"></script>
+        <script src="/client/main.js"></script>
+
 </body>
 
 </html>
