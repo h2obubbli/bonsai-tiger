@@ -1,0 +1,49 @@
+/**
+ * @group o-aside-panel
+ * @link http://registry.origami.ft.com/components/o-aside-panel
+*/
+
+/**
+ * Mixin to apply a custom theme for o-tabs
+ * @requires {function} oColorsGetColorFor
+ * @requires {function} oColorsGetPaletteColor
+ * @requires {function} oTypographyDisplay
+ */
+@mixin oAsidePanelTabsTheme {
+	display: none;
+
+	&[data-o-tabs--js] {
+		@include oTypographyDisplay($scale: -1, $line-height: 47px);
+		display: block;
+		float: right;
+		text-transform: none;
+		[role=tab] {
+			display: inline-block;
+			margin-right: 10px;
+			list-style-type: none;
+			a {
+				color: oColorsGetColorFor(body, text);
+				text-decoration: none;
+
+				&:hover {
+					color: oColorsGetColorFor(link-hover, text);
+				}
+			}
+			&[aria-selected=true] {
+				background-position: bottom center;
+				background-repeat: no-repeat;
+				background-image: url('data:image/gif;base64,R0lGODlhEQAJAKIAAAAAABEREaelm/fq2QAAAAAAAAAAAAAAACH5BAkAAAQALAAAAAARAAkAAAMcSLoq/FAMB+O4tLbLs+VdJYGgR4xkuaCpyrZlAgA7');
+				a {
+					pointer-events: none;
+					color: oColorsGetPaletteColor('black');
+				}
+			}
+		}
+	}
+}
+
+@if ($o-aside-panel-is-silent == false) {
+	.o-aside-panel__tabs {
+		@include oAsidePanelTabsTheme;
+	}
+}

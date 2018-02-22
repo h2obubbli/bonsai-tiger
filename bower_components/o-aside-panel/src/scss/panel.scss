@@ -1,0 +1,81 @@
+/**
+ * @group o-aside-panel
+ * @link http://registry.origami.ft.com/components/o-aside-panel
+ */
+
+/**
+ * Main mixin for an aside panel
+ * @requires {function} oColorsGetColorFor
+ */
+@mixin oAsidePanel {
+	position: relative;
+	background-color: oColorsGetColorFor(o-aside-panel-body box page, background);
+	overflow: hidden;
+}
+
+/**
+ * Apply to an aside header block
+ * @requires {mixin} oTypographyDisplay
+ * @requires {function} oColorsGetColorFor
+ */
+@mixin oAsidePanelHeader {
+	@include oTypographyDisplay($scale: 3, $line-height: 31px);
+	margin-bottom: 0;
+	border-bottom: 0;
+	padding-left: 10px;
+	padding-bottom: 0;
+	overflow: hidden;
+	background-color: oColorsGetColorFor(o-aside-panel-heading box page, background);
+	background-repeat: repeat-x;
+	background-position: bottom left;
+	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAABCAIAAABol6gpAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAEUlEQVQImWNYvnT2t5c3cJEAYL0XF6uvDusAAAAASUVORK5CYII=');
+}
+
+/**
+ * Styling for aside title
+ */
+@mixin oAsidePanelHeading {
+	float: left;
+	margin: 8px 0;
+	padding: 0;
+	font-size: inherit;
+	font-weight: inherit;
+}
+
+/**
+ * Apply to the main body of the aside
+ */
+@mixin oAsidePanelBody {
+	box-sizing: border-box;
+	padding: 10px;
+
+	&[role=tabpanel] {
+		// Float and the margin-left/left 100% positioning is used to ensure o-aside-panel root element is sized to tallest panel
+		float: left;
+		position: relative;
+		margin-left: -100%;
+		width: 100%;
+
+		&[aria-expanded=true] {
+			left: 100%;
+		}
+	}
+}
+
+@if ($o-aside-panel-is-silent == false) {
+	.o-aside-panel__header {
+		@include oAsidePanelHeader;
+	}
+
+	.o-aside-panel__heading {
+		@include oAsidePanelHeading;
+	}
+
+	.o-aside-panel__body {
+		@include oAsidePanelBody;
+	}
+
+	.o-aside-panel {
+		@include oAsidePanel;
+	}
+}

@@ -1,0 +1,32 @@
+{
+	"description": "Content panels",
+	"origamiType": "module",
+	"origamiCategory": "components",
+	"origamiVersion": 1,
+	"support": "https://github.com/Financial-Times/o-aside-panel/issues",
+	"supportContact": {
+		"email": "origami.support@ft.com",
+		"slack": "financialtimes/ft-origami"
+	},
+	"supportStatus": "active",
+	"ci": {
+		"circle": "https://circleci.com/api/v1/project/Financial-Times/o-aside-panel"
+	},
+	"demosDefaults": {
+		"sass": "demos/src/demo.scss",
+		"dependencies": "o-fonts@^3"
+	},
+	"demos": [
+		{
+			"name": "single",
+			"template": "demos/src/single.mustache",
+			"description": ""
+		},
+		{
+			"name": "multiple",
+			"template": "demos/src/multiple.mustache",
+			"dependencies": "o-tabs@^4",
+			"description": ""
+		}
+	]
+}

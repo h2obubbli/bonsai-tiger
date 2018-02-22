@@ -1,0 +1,13 @@
+$o-aside-panel-is-silent: true !default;
+@import "o-colors/main";
+@import "o-fonts/main";
+@import "o-typography/main";
+
+@import "src/scss/color-use-cases";
+@import "src/scss/panel";
+@import "src/scss/tabs";
+
+@if ($o-aside-panel-is-silent == false) {
+	// Load just the font that we're using for the heading
+	@include oFontsInclude(FinancierDisplayWeb, regular);
+}

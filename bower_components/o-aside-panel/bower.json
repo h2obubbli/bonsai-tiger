@@ -1,0 +1,14 @@
+{
+  "name": "o-aside-panel",
+  "main": [
+    "main.scss"
+  ],
+  "ignore": [
+    "files/",
+    ".travis.yml"
+  ],
+  "dependencies": {
+    "o-colors": "^4",
+    "o-typography": "^5"
+  }
+}

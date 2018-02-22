@@ -1,0 +1,9 @@
+$o-aside-panel-is-silent: false;
+$o-fonts-is-silent: false;
+
+@import "../../main";
+
+body {
+	max-width: 30%;
+	font-family: MetricWeb, sans-serif;
+}
