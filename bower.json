@@ -6,6 +6,7 @@
     "o-hierarchical-nav": "^5.0.5",
     "o-fonts": "^3.0.4",
     "o-typography ": "^5.5.0",
-    "o-tabs": "^4.0.4"
+    "o-tabs": "^4.0.4",
+    "o-aside-panel": "^3.0.3"
   }
 }
